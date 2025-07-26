@@ -16,6 +16,7 @@ local BUILTIN_STAGES = {
   SLIDE_OUT = "slide_out",
   FADE_IN_SLIDE_OUT = "fade_in_slide_out",
   STATIC = "static",
+  BLACK = "black",
 }
 
 local default_config = {
