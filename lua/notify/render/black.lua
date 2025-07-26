@@ -14,6 +14,7 @@ return function(bufnr, notif, highlights)
   api.nvim_buf_set_lines(bufnr, 0, -1, false, message)
 
   -- Apply black background to the entire notification
+  -- This will be blended with background_colour during opacity animation
   api.nvim_buf_set_extmark(bufnr, namespace, 0, 0, {
     hl_group = "NotifyBlackBackground",
     end_line = #message - 1,

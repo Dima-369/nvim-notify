@@ -17,12 +17,31 @@ return function(direction)
         row = next_row,
         border = "none",  -- No border at all
         style = "minimal",
+        opacity = 0,  -- Start invisible
+      }
+    end,
+    function()
+      return {
+        opacity = { 100 },  -- Fade in to full opacity
+        col = vim.opt.columns:get(),
       }
     end,
     function()
       return {
         col = vim.opt.columns:get(),
         time = true,
+      }
+    end,
+    function()
+      return {
+        opacity = {
+          0,  -- Fade out to invisible
+          frequency = 2,
+          complete = function(cur_opacity)
+            return cur_opacity <= 4
+          end,
+        },
+        col = vim.opt.columns:get(),
       }
     end,
   }

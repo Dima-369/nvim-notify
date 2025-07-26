@@ -27,7 +27,7 @@ function M.setup()
     hi default link NotifyLogTime Comment
     hi default link NotifyLogTitle Special
 
-    hi default NotifyBlackBackground guibg=#000000
+    hi default NotifyBlackBackground guibg=#000000 guifg=#ffffff
   ]])
 end
 
